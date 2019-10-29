@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="content">
+        <p>สวัสดี ADMIN</p> <br><br><br>
+        
+        <table>
+            <tr>
+                <th>บัญชีผู้ใช้</th>
+                <th>เครดิต</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr *ngFor="let i of list_member">
+                <td>{{i.username}}</td>
+                <td>{{i.credit}}</td>
+                <td><input type="text" [(ngModel)]="data[i.id]" value="" class="input"></td>
+                <td><input type="button" value="อัพเดท" (click)="update_credit(data[i.id], i.username)" class="btn"></td>
+            </tr>
+        </table>
+
+        <br><br><br><br><br><br>
+
+        <a (click)="logout()" class="logout">ออกจากระบบ</a>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="area">
+        <h1 class="title">ทายสูตร <span class="bakara">บาคาร่า</span> ออนไลน์</h1> <br><br>
+
+        <div *ngIf="account == 1">
+            <span class="formula_title">
+                {{welcome}}
+            </span>
+            <span class="f_username">
+                <span class="username">
+                    {{username}}
+                </span>
+            </span>
+
+            <br><br><br><br>
+            <span class="credit_title">
+                {{credit_title}}
+            </span>
+            <span class="f_credit">
+                <span class="credit">
+                    {{credit}}
+                </span>
+            </span>
+        </div>
+
+        <br><br><br><br><br><br>
+        <div *ngFor="let i of [1,2,3,4,5,6]" class="f_table">
+            <span *ngFor="let j of [0,1,2,3,4,5,6,7,8,9]" class="table">
+                <span class="sqr" id="{{i+''+j}}"></span>
+            </span>
+        </div>
+        <br><br>
+
+        <div class="reset_chip_before">
+            <span class="reset_chip" (click)="clear_chip()">รีเซ็ตเหรียญ</span>
+        </div>
+
+
+        <br><br><br><br>
+
+        <div style="text-align: center;"><span class="formula_before">ผลชนะก่อนหน้า</span> <br><br><br></div><br>
+
+        <div style="text-align: center;">
+            <img [src]="red_chip" (click)="chip('red')" class="chip">
+            <span class="padding_chip"></span>
+            <img [src]="blue_chip" (click)="chip('blue')" class="chip">
+            <span class="padding_chip"></span>
+            <img [src]="green_chip" (click)="chip('green')" class="chip">
+        </div>
+        <br><br><br><br><br>
+
+        <div style="text-align: center;">
+            <span class="formula" (click)="formula()">ทายสูตร</span>
+        </div> <br><br><br><br><br><br>
+
+        <span class="result_title">สูตรทาย </span>
+        <div style="text-align: center;">
+            <img src="{{formula_chip}}" class="result_chip">
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+
+        <div class="history">
+            <span class="history_title">ประวัติการทาย</span>
+            <br><br><br><br><br><br>
+            <div *ngFor="let i of [1,2,3,4,5,6]" class="f_table">
+                <span *ngFor="let j of [0,1,2,3,4,5,6,7,8,9]" class="table">
+                    <span class="sqr" id="{{i*10+''+j}}"></span>
+                </span>
+            </div>
+
+            <div class="reset_chip_before">
+                <span class="reset_chip reset_history" (click)="clear_history()">รีเซ็ตประวัติ</span>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</div>

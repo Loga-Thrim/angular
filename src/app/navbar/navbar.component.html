@@ -1,0 +1,10 @@
+<nav>
+    <button type="button" (click)="showMenu()">เมนู</button>
+    <ul>
+        <li [ngClass]="[hide]"><a routerLink="/">หน้าหลัก</a></li>
+        <li [ngClass]="[hide]"><a routerLink={{navAccount}}>{{member_menu}}</a></li>
+        <li [ngClass]="[hide]"><a routerLink="/formula">ทายสูตรบาคาร่า</a></li>
+        <li [ngClass]="[hide]"><a routerLink="">เติมเครดิต</a></li>
+        <li [ngClass]="[hide]" class="member"><span>{{member}}</span></li>
+    </ul>
+</nav>

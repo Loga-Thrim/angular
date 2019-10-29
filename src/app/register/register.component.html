@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="background"></div>    
+</div>
+<div class="content">
+    <span>สมัครสมาชิก</span>
+    <form #formRegister="ngForm" (ngSubmit)="onRegister(formRegister)"> <br><br>
+        <input [(ngModel)]="username" type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้" required> <br><br>
+        <input [(ngModel)]="password" type="password" name="password" class="form-control" placeholder="รหัสผ่าน" required> <br><br>
+        <input [(ngModel)]="email" type="email" name="email" class="form-control" placeholder="อีเมล" required> <br><br>
+        <re-captcha #captchaRef="reCaptcha" (resolved)="resolved($event)" siteKey="6LcN0rcUAAAAAJnGJ6rBTPZk1OEgGkxg3KXlT_hZ" style="display: inline-block;"></re-captcha> <br><br>
+        <input type="submit" value="สมัครสมาชิก" class="btn"> <br><br><br>
+    </form>
+    <hr> <br><br>
+    <a routerLink="/member" class="register">เข้าสู่ระบบ</a>
+</div>

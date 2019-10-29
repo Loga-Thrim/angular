@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="background"></div>    
+</div>
+<div class="content">
+    <span>เข้าสู่ระบบสมาชิก</span>
+    <form #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)"> <br><br>
+        <input [(ngModel)]="username" type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้" required> <br><br>
+        <input [(ngModel)]="password" type="password" name="password" class="form-control" placeholder="รหัสผ่าน" required> <br><br>
+        <input type="submit" value="เข้าสู่ระบบ" class="btn"> <br><br><br>
+    </form>
+    <hr> <br><br>
+    <a routerLink="/register" class="register">สมัครสมาชิก</a>
+</div>

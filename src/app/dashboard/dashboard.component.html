@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="content">
+        <p>บัญชีของฉัน</p> <br><br><br>
+        <span>ชื่อผู้ใช้</span>
+        <span class="result">{{username}}</span> <br><br><br><br>
+        <hr> <br>
+        <span>เครดิต</span>
+        <span class="result">{{credit}}</span> <br><br><br><br>
+        <hr> <br>
+        <span>อีเมล</span>
+        <span class="result">{{email}}</span> <br><br><br><br>
+        <hr> <br><br><br>
+        <a href="/"  class="change-password">เปลี่ยนรหัสผ่าน</a> <br><br><br><br>
+        <a (click)="logout()" class="logout">ออกจากระบบ</a>
+    </div>
+</div>

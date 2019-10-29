@@ -1,0 +1,55 @@
+.background{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url("../../assets/images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    height: 100vh;
+}
+.text-title{
+    position: absolute;
+    width: 55%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+    border: 1px solid white;
+    padding: 50px 50px;
+    background: rgba(0, 0, 0, .45);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    left: 50%;
+    top: 40%;
+    z-index: 1;
+    transition: .5s;
+}
+
+.text-title:hover{
+    background: white;
+    color: rgba(0, 0, 0, .75);
+}
+
+@media only screen and (max-width: 1350px){
+    .text-title{
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 950px){
+    .text-title{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .background{
+        background-position: center;
+    }
+    .text-title{
+        width: 65%;
+        font-size: 30px;
+        top: 20%;
+        padding: 25px 30px;
+    }
+}

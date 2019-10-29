@@ -1,0 +1,91 @@
+nav ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    position: fixed;
+    background: black;
+    z-index: 999;
+}
+nav ul li{
+    display: block;
+    list-style: none;
+    float: left;
+}
+nav ul li.member{
+    padding-right: 50px;
+    float: right;
+}
+nav ul li a{
+    font-size: 16;
+    display: block;
+    padding: 20px 40px;
+    color: white;
+    text-decoration: none;
+    transition: .1s;
+}
+nav ul li span{
+    font-size: 16;
+    display: block;
+    padding: 20px 40px;
+    color: white;
+    transition: .1s;
+    float: right;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover{
+    background: white;
+    color: black;
+}
+nav button{
+    width: 100%;
+    background: black;
+    border: 0px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 0;
+    transition: .1s;
+    cursor: pointer;
+    display: none;
+}
+nav button:hover{
+    background: white;
+    color: black;
+}
+
+@media only screen and (max-width: 800px){
+    nav button{
+        display: block;
+        font-size: 14px;
+    }
+    nav ul{
+        padding: 0;
+        background: rgba(0, 0, 0, .9);
+    }
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+    nav ul li.member{
+        padding: 0 25%;
+    }
+    nav ul li a{
+        padding: 15px 0;
+        letter-spacing: .7px;
+    }
+    nav ul li span{
+        padding: 15px 0;
+        letter-spacing: .7px;
+    }
+    nav ul li.nav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 801px){
+    nav ul li.nav{
+        display: block;
+    }
+}
